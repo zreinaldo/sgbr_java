@@ -26,6 +26,8 @@ public class Teste {
 			pessoa.setDtNascPessoa(dtNasc);
 
 		DAOPessoa.getInstancia().incluir(pessoa);
+		
+		DAOPessoa.getInstancia().incluir(pessoa);
 	}
 
 }

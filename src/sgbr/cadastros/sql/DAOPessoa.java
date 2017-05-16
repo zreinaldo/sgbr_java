@@ -53,7 +53,8 @@ public class DAOPessoa extends DAO_MYSQL implements IntfDAOPessoa {
 
 		conexao = this.getConection();
 
-		String sql = "INSERT INTO mydb.pessoa (PESSOA_nm,pessoa_ee,pessoa_dt_nasc) VALUES(?,?, ?)";
+		String sql = "INSERT INTO mydb.pessoa (" + Pessoa.NM_COLUNA_PESSOA_NM + "," + Pessoa.NM_COLUNA_PESSOA_EE + ","
+				+ Pessoa.NM_COLUNA_PESSOA_DT_NASC + ") VALUES(?,?,?)";
 
 		PreparedStatement ppSt = conexao.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 

@@ -3,20 +3,39 @@
  */
 package sgbr.fachada;
 
-import java.sql.SQLException;
-
-import sgbr.cadastros.sql.DAOPessoa;
-import sgbr.entidades.Pessoa;
+import sgbr.util.OTDFuncionario;
 
 /**
  * @author Reinaldo
  *
  */
 public class FachadaSGBR {
+	
+	private static FachadaSGBR aFachadaSGBR = new FachadaSGBR();
 
-	public Pessoa incluirPessoa(Pessoa pPessoa) throws SQLException {
-
-		return DAOPessoa.getInstancia().incluir(pPessoa);
-
+	/**
+	 * Cria um novo objeto FachadaSGBR.
+	 */
+	private FachadaSGBR() {
+		super();
 	}
+
+	/**
+	 * -
+	 *
+	 * @return
+	 */
+	public static FachadaSGBR getInstancia() {
+		if (FachadaSGBR.aFachadaSGBR == null) {
+			FachadaSGBR.aFachadaSGBR = new FachadaSGBR();
+		}
+
+		return FachadaSGBR.aFachadaSGBR;
+	}
+	
+	
+	public void incluirFuncionario(OTDFuncionario pOTDFuncionario) {
+		FachadaSGBR.getInstancia().incluirFuncionario(pOTDFuncionario);
+	}
+
 }

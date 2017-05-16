@@ -27,6 +27,22 @@ public class Pessoa extends EntidadeGenerica {
 	private Date dtNascPessoa;
 
 	/**
+	 * @param pCdPessoa
+	 */
+	public Pessoa(int pCdPessoa) {
+		super();
+		cdPessoa = pCdPessoa;
+	}
+
+	/**
+	 * @param pCdPessoa
+	 */
+	public Pessoa() {
+		super();
+
+	}
+
+	/**
 	 * @return the nmPessoa
 	 */
 	public String getNmPessoa() {
