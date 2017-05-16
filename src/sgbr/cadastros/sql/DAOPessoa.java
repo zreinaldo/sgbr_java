@@ -28,9 +28,6 @@ public class DAOPessoa extends DAO_MYSQL implements IntfDAOPessoa {
 		super();
 	}
 
-	// ~ Metodos
-	// --------------------------------------------------------------------------------------------------------------------
-
 	/**
 	 * - implementacao do singleton
 	 *
@@ -112,7 +109,6 @@ public class DAOPessoa extends DAO_MYSQL implements IntfDAOPessoa {
 
 		ppSt.close();
 		conexao.close();
-
 
 	}
 
